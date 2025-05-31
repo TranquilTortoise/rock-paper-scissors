@@ -81,33 +81,6 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-function playGame() {
-    
-    for (i=0; i <= 4; i++) {
-        playRound(getHumanChoice(), getComputerChoice());
-    }
-
-    declareScore(humanScore, computerScore);
-
-    if (humanScore > computerScore) {
-        console.log("Congratulations! You win!");
-        resetScores();
-        return;
-    }
-    if (humanScore < computerScore) {
-        console.log("Sorry! You lost... Try again next time.");
-        resetScores();
-        return;
-    }
-    if (humanScore === computerScore) {
-        console.log("It's a tie! Perhaps a rematch is in order here.");
-        resetScores();
-        return;
-    }
-    console.log("Error");
-    return;
-}
-
 function declareScore(humanScore, computerScore) {
 
     console.log(`Your Score: ${humanScore}`);
@@ -118,5 +91,3 @@ function resetScores() {
     humanScore = 0;
     computerScore = 0;
 }
-
-playGame();
