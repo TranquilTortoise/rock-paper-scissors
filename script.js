@@ -1,6 +1,15 @@
+// Variables
 let humanScore = 0;
 let computerScore = 0;
 
+// Execute
+const rockButton = document.createElement("button");
+rockButton.textContent= "Rock";
+
+const paperButton = document.createElement("button");
+
+
+// Functions
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3);
 
